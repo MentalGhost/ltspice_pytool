@@ -145,7 +145,7 @@ class Ltspice:
         if 'Binary' in lines[-1]:
             self._file_type = 'Binary'
 
-            if 'double' in self.flags:
+            if 'double' or 'real' in self.flags:
                 self._y_dtype = np.float64
 
         elif 'Value' in lines[-1]:
